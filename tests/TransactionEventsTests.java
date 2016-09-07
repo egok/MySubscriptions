@@ -9,28 +9,36 @@ import org.junit.Test;
 import dataTypes.TransactionEvents;
 import dataTypesImpl.TransactionEventsImpl;
 import model.TransactionEvent;
+import model.TransactionEventsHandler;
 import modelImpl.TransactionEventImpl;
 
 public class TransactionEventsTests {
 
+	
+	
+	
+	
 	private TransactionEvents myTEvents;
 
 	// For 2.a. requirement
 	@Test
 	public void getOnlyOutTransactions() {
-		myTEvents = new TransactionEventsImpl(actAsDataProvider());
-		assertEquals(myTEvents.getOnlyOutTransactionEvents().size(), 8);
+		myTEvents = new TransactionEventsImpl();
+		myTEvents.addAll(actAsDataProvider());
+		assertEquals(8, TransactionEventsHandler
+				.getOnlyOutTransactionEvents(myTEvents)
+				.size());
 	}
 	
 	// TODO: Change it to data provider
 	private ArrayList<TransactionEvent> actAsDataProvider(){
 		ArrayList<TransactionEvent> te = new ArrayList<>();
 		te.add(TransactionEventImpl
-		.teventBuilder()
-		.amount(-10)
-		.dateOfTransaction(1473187532)
-		.textDescription("PewaBiWeekly")
-		.build());
+				.teventBuilder()
+				.amount(-10)
+				.dateOfTransaction(1473187532)
+				.textDescription("PewaBiWeekly")
+				.build());
 		te.add(TransactionEventImpl
 				.teventBuilder()
 				.amount(-20)

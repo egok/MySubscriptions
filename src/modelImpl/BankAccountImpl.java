@@ -1,5 +1,5 @@
 package modelImpl;
 
-public class BankAccountImpl extends AccountImpl{
+public final class BankAccountImpl extends AccountImpl{
 	
 }

@@ -1,122 +1,92 @@
 package dataTypesImpl;
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 import dataTypes.TransactionEvents;
 import model.TransactionEvent;
 
 public class TransactionEventsImpl implements TransactionEvents{
 
-	private ArrayList<TransactionEvent> myTEvents;
-	private ArrayList<TransactionEvent> myOutGoingTEvents = new ArrayList<>();
-	
-	public TransactionEventsImpl(){
-		myTEvents = new ArrayList<>();
-	}
-	
-	public TransactionEventsImpl(ArrayList<TransactionEvent> tEvents) {
-		myTEvents = tEvents;
-	}
+	protected Set<TransactionEvent> myTEventsSet = new HashSet<TransactionEvent>();
 
-	public void add(ArrayList<TransactionEvent> tEvents) {
-		myTEvents.addAll(tEvents);
-	}
-
-	@Override
-	public ArrayList<TransactionEvent> getOnlyOutTransactionEvents() {
-		for(TransactionEvent tEvent : myTEvents){
-			if(tEvent.getAmount()<0) myOutGoingTEvents.add(tEvent);
-		}
-		return myOutGoingTEvents;
-	}
-
-	@Override
-	public boolean doesOutTransactionEventsExist() {
-		return !myOutGoingTEvents.isEmpty();
-	}
-
-	@Override
-	public ArrayList<TransactionEvent> getAllTEvents() {
-		return myTEvents;
-	}
+//	@Override
+//	public ArrayList<TransactionEvent> getOnlyOutTransactionEvents() {
+//		for(TransactionEvent tEvent : myTEvents){
+//			if(tEvent.getAmount()<0) myOutGoingTEvents.add(tEvent);
+//		}
+//		return myOutGoingTEvents;
+//	}
+//
+//	@Override
+//	public boolean doesOutTransactionEventsExist() {
+//		return !myOutGoingTEvents.isEmpty();
+//	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return myTEventsSet.size();
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		return myTEventsSet.isEmpty();
 	}
 
 	@Override
 	public boolean contains(Object o) {
-		// TODO Auto-generated method stub
-		return false;
+		return myTEventsSet.contains(o);
 	}
 
 	@Override
 	public Iterator<TransactionEvent> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return myTEventsSet.iterator();
 	}
 
 	@Override
 	public Object[] toArray() {
-		// TODO Auto-generated method stub
-		return null;
+		return myTEventsSet.toArray();
 	}
 
 	@Override
 	public <T> T[] toArray(T[] a) {
-		// TODO Auto-generated method stub
-		return null;
+		return myTEventsSet.toArray(a);
 	}
 
 	@Override
 	public boolean add(TransactionEvent e) {
-		myTEvents.add(e);
-		return false;
+		return myTEventsSet.add(e);
 	}
 
 	@Override
 	public boolean remove(Object o) {
-		// TODO Auto-generated method stub
-		return false;
+		return myTEventsSet.remove(o);
 	}
 
 	@Override
 	public boolean containsAll(Collection<?> c) {
-		// TODO Auto-generated method stub
-		return false;
+		return myTEventsSet.containsAll(c);
 	}
 
 	@Override
 	public boolean addAll(Collection<? extends TransactionEvent> c) {
-		// TODO Auto-generated method stub
-		return false;
+		return myTEventsSet.addAll(c);
 	}
 
 	@Override
 	public boolean retainAll(Collection<?> c) {
-		// TODO Auto-generated method stub
-		return false;
+		return myTEventsSet.retainAll(c);
 	}
 
 	@Override
 	public boolean removeAll(Collection<?> c) {
-		// TODO Auto-generated method stub
-		return false;
+		return myTEventsSet.removeAll(c);
 	}
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		myTEventsSet.clear();
 	}
 }

@@ -101,6 +101,25 @@ public class TransactionEventTests {
 				.textDescription("PewaBiWeekly")
 				.build();
 		
+		assertEquals(-1, tEvent.compareTo(tEventOther));
+	}
+	
+	@Test
+	public void testCompareDifferentDateReverse(){
+		TransactionEventImpl tEvent = (TransactionEventImpl)TransactionEventImpl
+				.teventBuilder()
+				.amount(-10)
+				.dateOfTransaction(1473187532)
+				.textDescription("PewaBiWeekly")
+				.build();
+		
+		TransactionEventImpl tEventOther = (TransactionEventImpl)TransactionEventImpl
+				.teventBuilder()
+				.amount(-10)
+				.dateOfTransaction(1473177532)
+				.textDescription("PewaBiWeekly")
+				.build();
+		
 		assertEquals(1, tEvent.compareTo(tEventOther));
 	}
 	
