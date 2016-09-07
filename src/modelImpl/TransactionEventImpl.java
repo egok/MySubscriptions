@@ -36,13 +36,17 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 	
 	@Override
 	public long getDate() {
-		// TODO convert it to normal date?
 		return myDateOfTransaction;
 	}
 	
 	@Override
 	public Double getAmount() {
 		return myAmount;
+	}
+	
+	@Override
+	public String getRecepientNumber() {
+		return myRecepientNumber;
 	}
 	
 	@Override

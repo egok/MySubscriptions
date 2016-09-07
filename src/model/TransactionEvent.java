@@ -7,4 +7,5 @@ public interface TransactionEvent {
 	public String getText();
 	public String getEventType();
 	public Double getAmount();
+	public String getRecepientNumber();
 }
