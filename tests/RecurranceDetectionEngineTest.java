@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import org.junit.Test;
 
 import model.RecurranceDetectionEngine;
-import model.TransactionEvent;
+import dataTypes.TransactionEvent;
 import modelImpl.BankAccountImpl;
 import modelImpl.RecurranceDetectionEngineImpl;
-import modelImpl.TransactionEventImpl;
+import dataTypesImpl.TransactionEventImpl;
 
 public class RecurranceDetectionEngineTest {
 	RecurranceDetectionEngine rde;

@@ -2,6 +2,7 @@ package model;
 
 import java.util.Set;
 
+import dataTypes.TransactionEvent;
 import dataTypes.TransactionEvents;
 import dataTypesImpl.TransactionEventsImpl;
 

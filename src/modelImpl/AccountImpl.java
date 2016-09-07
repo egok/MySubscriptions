@@ -6,7 +6,7 @@ import java.util.HashMap;
 import dataTypes.TransactionEvents;
 import dataTypesImpl.TransactionEventsImpl;
 import model.Account;
-import model.TransactionEvent;
+import dataTypes.TransactionEvent;
 
 abstract class AccountImpl implements Account{
 	

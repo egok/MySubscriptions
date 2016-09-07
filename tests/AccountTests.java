@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import dataTypesImpl.TransactionEventImpl;
 import model.Account;
 import modelImpl.*;
 

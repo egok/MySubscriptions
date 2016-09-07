@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import dataTypes.TransactionEvents;
-import model.TransactionEvent;
+import dataTypes.TransactionEvent;
 
 public class TransactionEventsImpl implements TransactionEvents{
 

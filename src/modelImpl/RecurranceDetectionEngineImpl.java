@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 import dataTypes.TransactionEvents;
 import model.RecurranceDetectionEngine;
-import model.TransactionEvent;
+import dataTypes.TransactionEvent;
 
 public class RecurranceDetectionEngineImpl implements RecurranceDetectionEngine{
 

@@ -1,4 +1,4 @@
-package model;
+package dataTypes;
 
 public interface TransactionEvent {
 	

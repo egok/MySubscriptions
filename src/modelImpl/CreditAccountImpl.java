@@ -1,7 +1,5 @@
 package modelImpl;
 
-public class CreditAccountImpl extends AccountImpl{
+import dataTypes.TransactionEvent;
 
-	
-
-}
+public class CreditAccountImpl extends AccountImpl{}

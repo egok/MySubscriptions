@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import model.TransactionEvent;
+import dataTypes.TransactionEvent;
 import modelImpl.BankAccountImpl;
-import modelImpl.TransactionEventImpl;
+import dataTypesImpl.TransactionEventImpl;
 
 public class BankAccountTest {
 	

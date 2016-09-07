@@ -1,8 +1,8 @@
-package modelImpl;
+package dataTypesImpl;
 
 import java.util.Objects;
 
-import model.TransactionEvent;
+import dataTypes.TransactionEvent;
 
 public class TransactionEventImpl implements TransactionEvent, Comparable<TransactionEvent>{
 	

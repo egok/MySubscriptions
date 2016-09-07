@@ -8,9 +8,9 @@ import org.junit.Test;
 
 import dataTypes.TransactionEvents;
 import dataTypesImpl.TransactionEventsImpl;
-import model.TransactionEvent;
+import dataTypes.TransactionEvent;
+import dataTypesImpl.TransactionEventImpl;
 import model.TransactionEventsHandler;
-import modelImpl.TransactionEventImpl;
 
 public class TransactionEventsTests {
 

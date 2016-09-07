@@ -2,8 +2,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import model.TransactionEvent;
-import modelImpl.TransactionEventImpl;
+import dataTypes.TransactionEvent;
+import dataTypesImpl.TransactionEventImpl;
 public class TransactionEventTests {
 	
 	@Test
