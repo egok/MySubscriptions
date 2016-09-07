@@ -22,7 +22,7 @@ public class RecurranceDetectionEngineTest {
 		
 		assertEquals("Monthly", rde.getRecurringTransactions("Video streaming", myAccount.getEvents()));
 	}
-	// For 4.a. requirement
+	// For 4.b. requirement
 	@Test 
 	public void getGymRecurrance() {
 		myAccount = new BankAccountImpl();
@@ -104,6 +104,24 @@ public class RecurranceDetectionEngineTest {
 		
 		te.add(TransactionEventImpl
 				.teventBuilder()
+				.amount(-10)
+				.dateOfTransaction(1473187532)
+				.textDescription("PewaBiWeekly")
+				.build());
+		te.add(TransactionEventImpl
+				.teventBuilder()
+				.amount(-20)
+				.dateOfTransaction(1472582732)
+				.textDescription("That thing")
+				.build());
+		te.add(TransactionEventImpl
+				.teventBuilder()
+				.amount(-40)
+				.dateOfTransaction(1466370800)
+				.textDescription("This thing")
+				.build());
+		te.add(TransactionEventImpl
+				.teventBuilder()
 				.amount(-200)
 				.dateOfTransaction(1466380800)
 				.textDescription("Gym")
@@ -116,11 +134,22 @@ public class RecurranceDetectionEngineTest {
 				.build());
 		te.add(TransactionEventImpl
 				.teventBuilder()
+				.amount(-30)
+				.dateOfTransaction(1471977932)
+				.textDescription("Other thing")
+				.build());
+		te.add(TransactionEventImpl
+				.teventBuilder()
 				.amount(-200)
 				.dateOfTransaction(1467590400)
 				.textDescription("Gym")
 				.build());
-		
+		te.add(TransactionEventImpl
+				.teventBuilder()
+				.amount(50)
+				.dateOfTransaction(1467590400)
+				.textDescription("Pewb")
+				.build());
 		te.add(TransactionEventImpl
 				.teventBuilder()
 				.amount(-200)
