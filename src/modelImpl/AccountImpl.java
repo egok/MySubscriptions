@@ -37,6 +37,6 @@ abstract class AccountImpl implements Account{
 	
 	@Override
 	public int getTransactionsCount() {
-		return myTEvents.getAllTEvents().size();
+		return myTEvents.size();
 	}
 }
