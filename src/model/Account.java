@@ -1,7 +1,5 @@
 package model;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import dataTypes.TransactionEvent;
 import dataTypes.TransactionEvents;
 /*
@@ -12,8 +10,6 @@ public interface Account{
 	public TransactionEvents getEvents();
 	public void addEvent(TransactionEvent transactionEvent);
 	public double getBalance();
-	public HashMap<String, ArrayList<Long>> getRecurringTransactions();
-	
-	// Long should be used
 	public int getTransactionsCount();
+
 }

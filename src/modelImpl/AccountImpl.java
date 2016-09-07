@@ -1,24 +1,15 @@
 package modelImpl;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import dataTypes.TransactionEvents;
 import dataTypesImpl.TransactionEventsImpl;
 import model.Account;
 import dataTypes.TransactionEvent;
 
 abstract class AccountImpl implements Account{
-	
+
 	private TransactionEvents myTEvents = new TransactionEventsImpl();
 	private double myBalance = 0;
 
-	@Override
-	public HashMap<String, ArrayList<Long>> getRecurringTransactions() {
-		RecurranceDetectionEngineImpl rde = new RecurranceDetectionEngineImpl();
-		return rde.getRecurringTransactions(myTEvents);
-	}
-	
 	@Override
 	public TransactionEvents getEvents() {
 		return myTEvents;
@@ -34,7 +25,7 @@ abstract class AccountImpl implements Account{
 	public double getBalance() {
 		return myBalance;
 	}
-	
+
 	@Override
 	public int getTransactionsCount() {
 		return myTEvents.size();

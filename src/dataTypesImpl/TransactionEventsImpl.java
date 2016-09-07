@@ -12,19 +12,6 @@ public class TransactionEventsImpl implements TransactionEvents{
 
 	protected Set<TransactionEvent> myTEventsSet = new HashSet<TransactionEvent>();
 
-//	@Override
-//	public ArrayList<TransactionEvent> getOnlyOutTransactionEvents() {
-//		for(TransactionEvent tEvent : myTEvents){
-//			if(tEvent.getAmount()<0) myOutGoingTEvents.add(tEvent);
-//		}
-//		return myOutGoingTEvents;
-//	}
-//
-//	@Override
-//	public boolean doesOutTransactionEventsExist() {
-//		return !myOutGoingTEvents.isEmpty();
-//	}
-
 	@Override
 	public int size() {
 		return myTEventsSet.size();
