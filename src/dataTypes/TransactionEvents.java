@@ -1,8 +1,6 @@
 package dataTypes;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-
 import model.TransactionEvent;
 
 public interface TransactionEvents{

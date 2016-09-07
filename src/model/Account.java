@@ -2,8 +2,6 @@ package model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-
 import dataTypes.TransactionEvents;
 /*
  * Public interface for the account information to reflect different Transactions
