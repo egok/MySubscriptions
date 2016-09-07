@@ -6,11 +6,11 @@ import model.TransactionEvent;
 
 public class TransactionEventImpl implements TransactionEvent, Comparable<TransactionEvent>{
 	
-	long myDateOfTransaction;
-	String myTextDescription;
-	String myEventType;
-	double myAmount;
-	String myRecepientNumber;
+	private long myDateOfTransaction;
+	private String myTextDescription;
+	private String myEventType;
+	private double myAmount;
+	private String myRecepientNumber;
 
 	public TransactionEventImpl(TransactionEventBuilder builder) {
 		this.myDateOfTransaction = builder.myDateOfTransaction;
