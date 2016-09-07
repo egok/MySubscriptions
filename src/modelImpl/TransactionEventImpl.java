@@ -1,8 +1,10 @@
 package modelImpl;
 
+import java.util.Objects;
+
 import model.TransactionEvent;
 
-public class TransactionEventImpl implements TransactionEvent{
+public class TransactionEventImpl implements TransactionEvent, Comparable<TransactionEvent>{
 	
 	long myDateOfTransaction;
 	String myTextDescription;
@@ -41,6 +43,43 @@ public class TransactionEventImpl implements TransactionEvent{
 	@Override
 	public Double getAmount() {
 		return myAmount;
+	}
+	
+	@Override
+	public int compareTo(TransactionEvent o) {
+		return Long.compare(myDateOfTransaction, o.getDate());
+	}
+	
+	@Override
+	public int hashCode(){
+		return Objects.hash(myAmount,
+				myDateOfTransaction, 
+				myEventType, 
+				myRecepientNumber, 
+				myTextDescription);
+	}
+	
+	@Override
+	public boolean equals(Object obj){
+		if (this == obj)
+        {
+            return true;
+        }
+        if (obj == null)
+        {
+            return false;
+        }
+        if (getClass() != obj.getClass())
+        {
+            return false;
+        }
+        TransactionEventImpl other = (TransactionEventImpl) obj;
+        
+        return Objects.equals(myAmount, other.myAmount)&&
+        Objects.equals(myDateOfTransaction, other.myDateOfTransaction)&&
+		Objects.equals(myEventType, other.myEventType)&&
+		Objects.equals(myRecepientNumber, other.myRecepientNumber)&&
+		Objects.equals(myTextDescription, other.myTextDescription);
 	}
 	
 	// Builder Class
