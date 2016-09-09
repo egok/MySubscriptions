@@ -51,7 +51,7 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 	
 	@Override
 	public int compareTo(TransactionEvent o) {
-		return Long.compare(myDateOfTransaction, o.getDate());
+		return myTextDescription.compareTo(o.getText());
 	}
 	
 	@Override

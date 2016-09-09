@@ -91,14 +91,14 @@ public class TransactionEventTests {
 				.teventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473177532)
-				.textDescription("PewaBiWeekly")
+				.textDescription("PewaBiWeeklya")
 				.build();
 		
 		TransactionEventImpl tEventOther = (TransactionEventImpl)TransactionEventImpl
 				.teventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
-				.textDescription("PewaBiWeekly")
+				.textDescription("PewaBiWeeklyb")
 				.build();
 		
 		assertEquals(-1, tEvent.compareTo(tEventOther));
@@ -110,14 +110,14 @@ public class TransactionEventTests {
 				.teventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
-				.textDescription("PewaBiWeekly")
+				.textDescription("PewaBiWeeklyB")
 				.build();
 		
 		TransactionEventImpl tEventOther = (TransactionEventImpl)TransactionEventImpl
 				.teventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473177532)
-				.textDescription("PewaBiWeekly")
+				.textDescription("PewaBiWeeklyA")
 				.build();
 		
 		assertEquals(1, tEvent.compareTo(tEventOther));

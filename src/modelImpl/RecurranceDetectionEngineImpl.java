@@ -81,6 +81,12 @@ public class RecurranceDetectionEngineImpl implements RecurranceDetectionEngine{
 		}
 		return recurringTList;
 	}
+	
+//	// TODO: Change the design to make it static method??
+//	@Override
+//	public HashMap<String, ArrayList<Long>> getRecurringTransactions(TransactionEvents tEvents) {
+//		tEvents.s
+//	}
 
 	private static boolean almostEqual(long value1, long value2){
 		return Math.abs(value1-value2)<THRESHOLD;

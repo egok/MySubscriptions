@@ -7,9 +7,9 @@ import dataTypes.TransactionEvents;
  */
 public interface Account{
 	
-	public TransactionEvents getEvents();
-	public void addEvent(TransactionEvent transactionEvent);
-	public double getBalance();
-	public int getTransactionsCount();
+	TransactionEvents getEvents();
+	void addEvent(TransactionEvent transactionEvent);
+	double getBalance();
+	int getTransactionsCount();
 
 }

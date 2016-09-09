@@ -1,16 +1,16 @@
 package dataTypesImpl;
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
 import dataTypes.TransactionEvents;
 import dataTypes.TransactionEvent;
 
 public class TransactionEventsImpl implements TransactionEvents{
 
-	protected Set<TransactionEvent> myTEventsSet = new HashSet<TransactionEvent>();
+	protected Set<TransactionEvent> myTEventsSet = new TreeSet<TransactionEvent>();
 
 	@Override
 	public int size() {
@@ -75,5 +75,11 @@ public class TransactionEventsImpl implements TransactionEvents{
 	@Override
 	public void clear() {
 		myTEventsSet.clear();
+	}
+
+	//TODO : Get Recurring events directly from here?
+	@Override
+	public TransactionEvents getRecurringEvents() {
+		return null;
 	}
 }
