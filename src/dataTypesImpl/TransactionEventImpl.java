@@ -51,7 +51,14 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 	
 	@Override
 	public int compareTo(TransactionEvent o) {
-		return myTextDescription.compareTo(o.getText());
+		int result = myTextDescription.compareTo(o.getText());
+
+		result = result == 0 ? Double.compare(myAmount, o.getAmount()) : result;
+        result = result == 0 ? Long.compare(myDateOfTransaction, o.getDate()) : result;
+        result = result == 0 ? myEventType.compareTo(o.getEventType()) : result;
+        result = result == 0 ? myRecepientNumber.compareTo(o.getRecepientNumber()) : result;
+        return result;
+		//return myTextDescription.compareTo(o.getText());
 	}
 	
 	@Override
@@ -65,10 +72,10 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 	
 	@Override
 	public boolean equals(Object obj){
-		if (this == obj)
-        {
-            return true;
-        }
+		if(this == obj)
+		{
+			return true;
+		}
         if (obj == null)
         {
             return false;
@@ -88,10 +95,10 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 	
 	// Builder Class
 	public static class TransactionEventBuilder{
-		private long myDateOfTransaction;
-		private String myTextDescription;
-		private String myEventType;
-		private double myAmount;
+		private long myDateOfTransaction = 0;
+		private String myTextDescription = "";
+		private String myEventType = "";
+		private double myAmount = 0;
 		public String myRecepientNumber = "";
 		
 		// To restrict access from out side the class
