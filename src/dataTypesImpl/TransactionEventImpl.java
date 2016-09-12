@@ -93,6 +93,14 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 		Objects.equals(myTextDescription, other.myTextDescription);
 	}
 	
+	@Override
+	public String toString() {
+		return "Text: '" + this.myTextDescription + "'\n"
+				+ "Date: '" + this.myDateOfTransaction + "'\n"
+				+ "EventType: '" + this.myEventType + "'\n"
+				+ "Amount: '" + this.myAmount + "'\n";
+	} 
+	
 	// Builder Class
 	public static class TransactionEventBuilder{
 		private long myDateOfTransaction = 0;
