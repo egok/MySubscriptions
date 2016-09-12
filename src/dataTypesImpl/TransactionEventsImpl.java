@@ -8,6 +8,7 @@ import java.util.TreeSet;
 import dataTypes.TransactionEvents;
 import dataTypes.TransactionEvent;
 
+// Using TreeSet to make sure that all the TransactionEvent objects will be in order by using compareto.
 public class TransactionEventsImpl implements TransactionEvents{
 
 	protected Set<TransactionEvent> myTEventsSet = new TreeSet<TransactionEvent>();
@@ -77,9 +78,4 @@ public class TransactionEventsImpl implements TransactionEvents{
 		myTEventsSet.clear();
 	}
 
-	//TODO : Get Recurring events directly from here?
-	@Override
-	public TransactionEvents getRecurringEvents() {
-		return null;
-	}
 }

@@ -4,6 +4,9 @@ import java.util.Objects;
 
 import dataTypes.TransactionEvent;
 
+// Using simple builder pattern to build TransactionEvent object
+// Also implementing Comparable, to make sure TranactionEvent objects will be sorted according to this order
+// Text, DateOfTransaction, Amount, EventType and RecepientNumber in TransactionEvents
 public class TransactionEventImpl implements TransactionEvent, Comparable<TransactionEvent>{
 	
 	private long myDateOfTransaction;
@@ -20,7 +23,7 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 		this.myRecepientNumber = builder.myRecepientNumber;
 	}
 	
-	public static TransactionEventBuilder teventBuilder(){
+	public static TransactionEventBuilder tEventBuilder(){
 		return new TransactionEventBuilder();
 	}
 	
@@ -53,12 +56,11 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 	public int compareTo(TransactionEvent o) {
 		int result = myTextDescription.compareTo(o.getText());
 
+		result = result == 0 ? Long.compare(myDateOfTransaction, o.getDate()) : result;
 		result = result == 0 ? Double.compare(myAmount, o.getAmount()) : result;
-        result = result == 0 ? Long.compare(myDateOfTransaction, o.getDate()) : result;
         result = result == 0 ? myEventType.compareTo(o.getEventType()) : result;
         result = result == 0 ? myRecepientNumber.compareTo(o.getRecepientNumber()) : result;
         return result;
-		//return myTextDescription.compareTo(o.getText());
 	}
 	
 	@Override
@@ -92,7 +94,7 @@ public class TransactionEventImpl implements TransactionEvent, Comparable<Transa
 		Objects.equals(myRecepientNumber, other.myRecepientNumber)&&
 		Objects.equals(myTextDescription, other.myTextDescription);
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Text: '" + this.myTextDescription + "'\n"

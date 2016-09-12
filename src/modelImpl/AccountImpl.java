@@ -3,8 +3,10 @@ package modelImpl;
 import dataTypes.TransactionEvents;
 import dataTypesImpl.TransactionEventsImpl;
 import model.Account;
+
 import dataTypes.TransactionEvent;
 
+// Simple account class
 abstract class AccountImpl implements Account{
 
 	private TransactionEvents myTEvents = new TransactionEventsImpl();

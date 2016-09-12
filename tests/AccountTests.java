@@ -15,7 +15,7 @@ public class AccountTests {
 	public void addAnEvent() {
 		myAccount = new BankAccountImpl();
 		myTEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-20)
 				.dateOfTransaction(12345)
 				.textDescription("Mew")
@@ -29,7 +29,7 @@ public class AccountTests {
 	public void getAnEvent() {
 		myAccount = new BankAccountImpl();
 		myAccount.addEvent(TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-20)
 				.dateOfTransaction(12345)
 				.textDescription("Mew")
@@ -42,7 +42,7 @@ public class AccountTests {
 	public void getBalance() {
 		myAccount = new BankAccountImpl();
 		myAccount.addEvent(TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(0)
 				.dateOfTransaction(12345)
 				.textDescription("Mew")
@@ -55,14 +55,14 @@ public class AccountTests {
 	public void getBalanceChange() {
 		myAccount = new BankAccountImpl();
 		myAccount.addEvent(TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-20)
 				.dateOfTransaction(12345)
 				.textDescription("Mew")
 				.build());
 		
 		myAccount.addEvent(TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(200)
 				.dateOfTransaction(12345)
 				.textDescription("Mew")

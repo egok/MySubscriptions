@@ -24,19 +24,19 @@ public class TransactionEventsHandlerTest {
 	@Test
 	public void testForEquals() {
 		TransactionEvent e1 = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
 				.textDescription("PewaBiWeekly")
 				.build();
 		TransactionEvent e2 = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-20)
 				.dateOfTransaction(1472582732)
 				.textDescription("PewaMonthly")
 				.build();
 		TransactionEvent e3 = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-30)
 				.dateOfTransaction(1471977932)
 				.textDescription("PewaBiWeekly")
@@ -53,7 +53,7 @@ public class TransactionEventsHandlerTest {
 		TransactionEvents te = new TransactionEventsImpl();
 		TransactionEvent e;
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
 				.textDescription("PewaBiWeekly")
@@ -61,7 +61,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-20)
 				.dateOfTransaction(1472582732)
 				.textDescription("PewaMonthly")
@@ -69,7 +69,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-30)
 				.dateOfTransaction(1471977932)
 				.textDescription("PewaBiWeekly")
@@ -77,7 +77,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-40)
 				.dateOfTransaction(1470163532)
 				.textDescription("PewaMonthly")
@@ -85,7 +85,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(50)
 				.dateOfTransaction(12345)
 				.textDescription("Pewb")
@@ -93,7 +93,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(60)
 				.dateOfTransaction(1467744332)
 				.textDescription("PewaMonthly")
@@ -101,7 +101,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-70)
 				.dateOfTransaction(12345)
 				.textDescription("Pewc")
@@ -109,7 +109,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-80)
 				.dateOfTransaction(12345)
 				.textDescription("Pewd")
@@ -117,7 +117,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-90)
 				.dateOfTransaction(12345)
 				.textDescription("Pewe")
@@ -125,7 +125,7 @@ public class TransactionEventsHandlerTest {
 		assertFalse(te.contains(e));
 		te.add(e);
 		e = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(12345)
 				.textDescription("Pewf")

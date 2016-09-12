@@ -9,7 +9,7 @@ public class TransactionEventTests {
 	@Test
 	public void testBuildWithDate() {
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.dateOfTransaction(1473187532)
 				.build();
 		
@@ -19,7 +19,7 @@ public class TransactionEventTests {
 	@Test
 	public void testBuildWithDescription() {
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.textDescription("PewaBiWeekly")
 				.build();
 		
@@ -29,7 +29,7 @@ public class TransactionEventTests {
 	@Test
 	public void testBuildWithEventType() {
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.eventType("SomeEvent")
 				.build();
 		
@@ -39,7 +39,7 @@ public class TransactionEventTests {
 	@Test
 	public void testBuildWithAmountPositiveNumber() {
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(10.27)
 				.build();
 		
@@ -49,7 +49,7 @@ public class TransactionEventTests {
 	@Test
 	public void testBuildWithAmountNegetiveNumber() {
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10.42356478373)
 				.build();
 		
@@ -59,7 +59,7 @@ public class TransactionEventTests {
 	@Test
 	public void testBuildWithRecepientNumber() {
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.recepientNumber("123-456-789")
 				.build();
 		
@@ -69,14 +69,14 @@ public class TransactionEventTests {
 	@Test
 	public void testCompareSameDate(){
 		TransactionEventImpl tEvent = (TransactionEventImpl)TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
 				.textDescription("PewaBiWeekly")
 				.build();
 		
 		TransactionEventImpl tEventOther = (TransactionEventImpl)TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
 				.textDescription("PewaBiWeekly")
@@ -88,14 +88,14 @@ public class TransactionEventTests {
 	@Test
 	public void testCompareDifferentDate(){
 		TransactionEventImpl tEvent = (TransactionEventImpl)TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473177532)
 				.textDescription("PewaBiWeeklya")
 				.build();
 		
 		TransactionEventImpl tEventOther = (TransactionEventImpl)TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
 				.textDescription("PewaBiWeeklyb")
@@ -107,14 +107,14 @@ public class TransactionEventTests {
 	@Test
 	public void testCompareDifferentDateReverse(){
 		TransactionEventImpl tEvent = (TransactionEventImpl)TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
 				.textDescription("PewaBiWeeklyB")
 				.build();
 		
 		TransactionEventImpl tEventOther = (TransactionEventImpl)TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473177532)
 				.textDescription("PewaBiWeeklyA")
@@ -126,14 +126,14 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsTrue(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
 				.textDescription("PewaBiWeekly")
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.dateOfTransaction(1473187532)
 				.textDescription("PewaBiWeekly")
@@ -145,12 +145,12 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsTrueWithAmount(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.build();
 		
@@ -160,12 +160,12 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsFalseWithAmount(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-11)
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.amount(-10)
 				.build();
 		
@@ -175,12 +175,12 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsTrueWithEventType(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.eventType("SomeEvent")
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.eventType("SomeEvent")
 				.build();
 		
@@ -190,12 +190,12 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsFalseWithEventType(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.eventType("SomeEvent")
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.eventType("OtherEvent")
 				.build();
 		
@@ -205,12 +205,12 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsTrueWithDateOfTransaction(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.dateOfTransaction(1473187532)
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.dateOfTransaction(1473187532)
 				.build();
 		
@@ -220,12 +220,12 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsFalseWithDateOfTransaction(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.dateOfTransaction(1473187531)
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.dateOfTransaction(1473187532)
 				.build();
 		
@@ -235,12 +235,12 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsTrueWithRecepientNumber(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.recepientNumber("1232")
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.recepientNumber("1232")
 				.build();
 		
@@ -250,12 +250,12 @@ public class TransactionEventTests {
 	@Test
 	public void testEqualReturnsFalseWithRecepientNumber(){
 		TransactionEvent tEvent = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.recepientNumber("1232")
 				.build();
 		
 		TransactionEvent tEventOther = TransactionEventImpl
-				.teventBuilder()
+				.tEventBuilder()
 				.recepientNumber("12322")
 				.build();
 		
